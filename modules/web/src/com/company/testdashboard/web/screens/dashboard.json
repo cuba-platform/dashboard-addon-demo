@@ -1,0 +1,166 @@
+{
+  "title": "json",
+  "referenceName": "json",
+  "visualModel": {
+    "children": [
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.GridLayout",
+        "data": {
+          "rows": 2,
+          "columns": 2,
+          "areas": [
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout",
+                "data": {
+                  "children": [],
+                  "weight": 1,
+                  "id": "3c96072c-4c64-e588-58e1-932a1d664cc8",
+                  "__new": true,
+                  "__detached": false,
+                  "__removed": false
+                }
+              },
+              "row1": 1,
+              "col1": 1,
+              "id": "8737b64f-2825-a63c-d54f-92caf5db0a1c",
+              "__new": true,
+              "__detached": false,
+              "__removed": false
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout",
+                "data": {
+                  "children": [],
+                  "weight": 1,
+                  "id": "1435dafa-4f1c-89c2-184b-68cffc6f44c4",
+                  "__new": true,
+                  "__detached": false,
+                  "__removed": false
+                }
+              },
+              "row1": 1,
+              "col1": 0,
+              "id": "985e694e-10a7-3d00-1ec1-c19418ab844d",
+              "__new": true,
+              "__detached": false,
+              "__removed": false
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout",
+                "data": {
+                  "children": [
+                    {
+                      "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                      "data": {
+                        "widget": {
+                          "widgetId": "jmxConsole",
+                          "caption": "jmxConsole",
+                          "name": "Screen",
+                          "parameters": [
+                            {
+                              "name": "123",
+                              "alias": "123",
+                              "parameterValue": {
+                                "className": "com.haulmont.addon.dashboard.model.paramtypes.LongParameterValue",
+                                "data": {
+                                  "value": 123
+                                }
+                              },
+                              "id": "15be115f-cf41-ee65-9ac2-4cc5851d443a",
+                              "__new": true,
+                              "__detached": false,
+                              "__removed": false
+                            }
+                          ],
+                          "widgetFields": [
+                            {
+                              "name": "screenId",
+                              "parameterValue": {
+                                "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                                "data": {
+                                  "value": "jmxConsole"
+                                }
+                              },
+                              "id": "cee2a0ee-36ea-b09f-c2bd-a35c909fc16d",
+                              "__new": true,
+                              "__detached": false,
+                              "__removed": false
+                            }
+                          ],
+                          "browseFrameId": "dashboard$ScreenWidget",
+                          "createdBy": "admin",
+                          "id": "33f57d80-b966-dad2-99c4-662397784cd5",
+                          "__new": true,
+                          "__detached": false,
+                          "__removed": false
+                        },
+                        "children": [],
+                        "weight": 1,
+                        "id": "09257f04-fc9a-be5d-5cb5-42e9ad64bd1b",
+                        "__new": true,
+                        "__detached": false,
+                        "__removed": false
+                      }
+                    }
+                  ],
+                  "weight": 1,
+                  "id": "eab57c3c-98f6-55f6-e0dd-8601849d5fcd",
+                  "__new": true,
+                  "__detached": false,
+                  "__removed": false
+                }
+              },
+              "row1": 0,
+              "col1": 0,
+              "id": "5afd9c08-0562-7e4e-c8eb-d474d8b6b2e6",
+              "__new": true,
+              "__detached": false,
+              "__removed": false
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout",
+                "data": {
+                  "children": [],
+                  "weight": 1,
+                  "id": "cb50d446-666c-fc12-70b4-f6e7f5e9e80c",
+                  "__new": true,
+                  "__detached": false,
+                  "__removed": false
+                }
+              },
+              "row1": 0,
+              "col1": 1,
+              "id": "508ff6f8-67b7-2739-cab6-c66dddba0a1f",
+              "__new": true,
+              "__detached": false,
+              "__removed": false
+            }
+          ],
+          "children": [],
+          "weight": 1,
+          "id": "f45c397c-284b-765d-efe6-61d0a95787a9",
+          "__new": true,
+          "__detached": false,
+          "__removed": false
+        }
+      }
+    ],
+    "weight": 1,
+    "id": "9f4ea5d3-bc0b-cc7b-7381-ed7542adbc78",
+    "__new": true,
+    "__detached": false,
+    "__removed": false
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 0,
+  "id": "11b7c9ea-389b-8637-9897-2277f43a3ec9",
+  "__new": true,
+  "__detached": false,
+  "__removed": false
+}
