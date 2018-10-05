@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.demo.dashboard.web.widget.userInfoBrowser.UserDisplayWidget">
+    <dsContext>
+        <datasource id="userDs"
+                    allowCommit="false"
+                    class="com.haulmont.cuba.security.entity.User"
+                    view="_local"/>
+    </dsContext>
+    <layout height="100%"
+            spacing="true"
+            width="100%">
+        <vbox spacing="true">
+            <fieldGroup datasource="userDs"
+                        editable="false"
+                        height="100%"
+                        width="100%">
+                <column width="250px">
+                    <field property="login"/>
+                    <field property="name"/>
+                    <field property="firstName"/>
+                    <field property="lastName"/>
+                    <field property="middleName"/>
+                    <field property="position"/>
+                    <field property="email"/>
+                    <field property="language"/>
+                    <field property="timeZone"/>
+                    <field property="timeZoneAuto"/>
+                    <field property="active"/>
+                    <field property="changePasswordAtNextLogon"/>
+                    <field property="ipMask"/>
+                </column>
+            </fieldGroup>
+        </vbox>
+    </layout>
+</window>

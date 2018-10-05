@@ -1,9 +1,8 @@
 
 buildscript {
-    ext.cubaVersion = '6.9.5'
+    ext.cubaVersion = '6.9.6'
     repositories {
         
-        mavenLocal()
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
             credentials {
@@ -23,6 +22,7 @@ def modulePrefix = 'app'
 def globalModule = project(":${modulePrefix}-global")
 def coreModule = project(":${modulePrefix}-core")
 def webModule = project(":${modulePrefix}-web")
+def webThemesModule = project(":${modulePrefix}-web-themes")
 
 def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
@@ -32,7 +32,7 @@ apply(plugin: 'cuba')
 
 cuba {
     artifact {
-        group = 'com.company.testdashboard'
+        group = 'com.haulmont.demo.dashboard'
         version = '0.1'
         isSnapshot = true
     }
@@ -109,7 +109,7 @@ configure(coreModule) {
     task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
         dbms = 'hsql'
         host = 'localhost'
-        dbName = 'testdashboard'
+        dbName = 'dashboarddemo'
         dbUser = 'sa'
         dbPassword = ''
     }
@@ -117,7 +117,7 @@ configure(coreModule) {
     task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
         dbms = 'hsql'
         host = 'localhost'
-        dbName = 'testdashboard'
+        dbName = 'dashboarddemo'
         dbUser = 'sa'
         dbPassword = ''
     }
@@ -146,7 +146,7 @@ configure(webModule) {
 
     task deployConf(type: Copy) {
         from file('src')
-        include "com/company/testdashboard/**"
+        include "com/haulmont/demo/dashboard/**"
         into "$cuba.tomcat.dir/conf/${modulePrefix}"
     }
 
@@ -169,6 +169,30 @@ configure(webModule) {
     task deploy(dependsOn: [assemble, cleanConf], type: CubaDeployment) {
         appName = "${modulePrefix}"
         appJars(modulePrefix + '-global', modulePrefix + '-web')
+    }
+    task buildScssThemes(type: CubaWebScssThemeCreation)
+    task deployThemes(type: CubaDeployThemeTask, dependsOn: buildScssThemes)
+    assemble.dependsOn buildScssThemes
+}
+
+configure(webThemesModule) {
+    apply(plugin: 'java')
+    apply(plugin: 'maven')
+    apply(plugin: 'cuba')
+
+    appModuleType = 'web-themes'
+
+    buildDir = file('../build/scss-themes')
+
+    sourceSets {
+        main {
+            java {
+                srcDir '.'
+            }
+            resources {
+                srcDir '.'
+            }
+        }
     }
 }
 

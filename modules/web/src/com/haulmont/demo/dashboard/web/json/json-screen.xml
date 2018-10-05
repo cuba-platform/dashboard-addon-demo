@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.haulmont.demo.dashboard.web.json.JsonDashboardController"
+        messagesPack="com.haulmont.demo.dashboard.web.json"
+        xmlns:dash="http://schemas.haulmont.com/cubadshb/ui-component.xsd">
+
+    <dialogMode height="600"
+                width="800"/>
+    <layout>
+        <dash:dashboard id="json"
+                        jsonPath="com/haulmont/demo/dashboard/web/json/dashboard.json"/>
+    </layout>
+</window>

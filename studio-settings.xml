@@ -8,26 +8,4 @@
         <functionality id="oneToOneIndex"
                        state="ENABLE"/>
     </functionalitySettings>
-    <dbScripts>
-        <excludes>
-            <hsql>
-                <item name="181002-2-updateDashboardWidgetTemplate_DropScript.sql">
-                    <![CDATA[alter table DASHBOARD_WIDGET_TEMPLATE drop column WIDGET_TEMPLATE_GROUP_ID__U62331 cascade ;]]>
-                </item>
-                <item name="181002-2-updateDashboardWidgetTemplate.sql">
-                    <![CDATA[alter table DASHBOARD_WIDGET_TEMPLATE alter column WIDGET_TEMPLATE_GROUP_ID rename to WIDGET_TEMPLATE_GROUP_ID__U62331 ^
-drop index IDX_DASHBOARD_WIDGET_TEMPLATE_ON_WIDGET_TEMPLATE_GROUP ;
-alter table DASHBOARD_WIDGET_TEMPLATE drop constraint FK_DASHBOARD_WIDGET_TEMPLATE_ON_WIDGET_TEMPLATE_GROUP ;]]>
-                </item>
-                <item name="181002-2-updateDashboardPersistentDashboard.sql">
-                    <![CDATA[alter table DASHBOARD_PERSISTENT_DASHBOARD alter column DASHBOARD_GROUP_ID rename to DASHBOARD_GROUP_ID__U98175 ^
-drop index IDX_DASHBOARD_PERSISTENT_DASHBOARD_ON_DASHBOARD_GROUP ;
-alter table DASHBOARD_PERSISTENT_DASHBOARD drop constraint FK_DASHBOARD_PERSISTENT_DASHBOARD_ON_DASHBOARD_GROUP ;]]>
-                </item>
-                <item name="181002-2-updateDashboardPersistentDashboard_DropScript.sql">
-                    <![CDATA[alter table DASHBOARD_PERSISTENT_DASHBOARD drop column DASHBOARD_GROUP_ID__U98175 cascade ;]]>
-                </item>
-            </hsql>
-        </excludes>
-    </dbScripts>
 </studio>

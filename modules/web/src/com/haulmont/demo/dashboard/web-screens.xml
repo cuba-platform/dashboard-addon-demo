@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="dashboard-demo$json-screen"
+            template="com/haulmont/demo/dashboard/web/json/json-screen.xml"/>
+    <screen id="mainWindow"
+            template="com/haulmont/demo/dashboard/web/mainscreen/dashboard-reference-window.xml"/>
+    <screen id="dashboard-demo$UserDisplayWidget"
+            template="com/haulmont/demo/dashboard/web/widget/userInfoBrowser/userdisp-widget.xml"/>
+    <screen id="dashboard-demo$ClockWidget"
+            template="com/haulmont/demo/dashboard/web/widget/clock/clock-widget.xml"/>
+</screen-config>
