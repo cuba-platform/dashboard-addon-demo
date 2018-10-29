@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.demo.dashboard.web.widget.sample.inprogress.InProgressWidget"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd"
+        messagesPack="com.haulmont.demo.dashboard.web.widget.sample.inprogress">
+    <layout height="100%"
+            spacing="true"
+            width="100%">
+        <chart:serialChart id="redLineChart"
+                           addClassNames="true"
+                           autoMargins="true"
+                           categoryField="year"
+                           creditsPosition="bottom-left"
+                           height="100%"
+                           marginBottom="26"
+                           marginLeft="20"
+                           marginRight="20"
+                           marginTop="70"
+                           theme="NONE"
+                           width="100%">
+            <chart:allLabels>
+                <chart:label bold="true"
+                             size="14"
+                             text="msg://inProgress"
+                             x="10"
+                             y="10"/>
+                <chart:label id="blue-thin"
+                             bold="false"
+                             size="35"
+                             text="126"
+                             x="10"
+                             y="30"/>
+            </chart:allLabels>
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            gridAlpha="0"
+                            labelsEnabled="false"
+                            position="LEFT"
+                            stackType="REGULAR"/>
+            </chart:valueAxes>
+            <chart:chartCursor bulletsEnabled="true"
+                               categoryBalloonEnabled="false"
+                               cursorAlpha="0"
+                               selectionAlpha="0"
+                               valueBalloonsEnabled="true"
+                               valueLineBalloonEnabled="false"
+                               valueLineEnabled="false"/>
+            <chart:balloon borderAlpha="0.4"
+                           borderColor="#4085FC"
+                           borderThickness="2"
+                           color="#4085FC"
+                           fillAlpha="0.8"
+                           fillColor="WHITE"
+                           fixedPosition="false"
+                           shadowAlpha="0"/>
+            <chart:graphs>
+                <chart:graph fillAlphas="0.4"
+                             lineAlpha="1"
+                             lineColor="#BCF3EE"
+                             lineThickness="2"
+                             showBalloon="true"
+                             title="Cars"
+                             type="LINE"
+                             valueField="value">
+                    <chart:fillColors>
+                        <chart:color value="#BCF3EE"/>
+                    </chart:fillColors>
+                </chart:graph>
+            </chart:graphs>
+            <chart:categoryAxis axisAlpha="0"
+                                axisColor="#DADADA"
+                                gridAlpha="0.1"
+                                gridColor="#000000"
+                                labelFrequency="0"
+                                labelsEnabled="false"
+                                startOnAxis="true"/>
+        </chart:serialChart>
+    </layout>
+</window>

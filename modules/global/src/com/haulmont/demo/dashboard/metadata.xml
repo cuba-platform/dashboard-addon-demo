@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
 
-    <metadata-model root-package="com.haulmont.demo.dashboard" namespace="dashboarddemo"/>
+    <metadata-model root-package="com.haulmont.demo.dashboard" namespace="dashboarddemo">
+        <class>com.haulmont.demo.dashboard.route.Route</class>
+    </metadata-model>
 
 </metadata>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.demo.dashboard.web.widget.sample.rides.RidesWidget"
+        messagesPack="com.haulmont.demo.dashboard.web.widget.sample.rides">
+    <dsContext>
+        <collectionDatasource id="routeDs"
+                              class="com.haulmont.demo.dashboard.route.Route"
+                              refreshMode="NEVER"/>
+    </dsContext>
+    <layout height="100%"
+            spacing="true"
+            width="100%">
+        <table id="routesTable"
+               caption="msg://rides"
+               columnHeaderVisible="false"
+               height="100%"
+               showSelection="false"
+               stylename="color-table"
+               width="100%">
+            <columns>
+                <column id="time"
+                        width="70px"/>
+                <column id="departure"
+                        align="CENTER"/>
+                <column id="direction"
+                        width="40px"/>
+                <column id="arrival"
+                        align="CENTER"/>
+            </columns>
+            <rows datasource="routeDs"/>
+        </table>
+    </layout>
+</window>

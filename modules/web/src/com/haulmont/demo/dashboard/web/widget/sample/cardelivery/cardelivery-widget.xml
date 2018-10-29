@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        class="com.haulmont.demo.dashboard.web.widget.sample.cardelivery.CarDeliveryWidget"
+        xmlns:chart="http://schemas.haulmont.com/charts/charts.xsd"
+        messagesPack="com.haulmont.demo.dashboard.web.widget.sample.cardelivery">
+    <layout height="100%"
+            spacing="true"
+            width="100%">
+        <chart:pieChart id="pieChart"
+                        addClassNames="true"
+                        angle="0"
+                        colorField="color"
+                        creditsPosition="bottom-left"
+                        stylename="pie-chart"
+                        depth3D="0"
+                        height="250px"
+                        labelsEnabled="false"
+                        marginTop="35"
+                        radius="35%"
+                        startDuration="1"
+                        titleField="type"
+                        valueField="class"
+                        width="100%">
+            <chart:legend align="CENTER"
+                          autoMargins="true"
+                          equalWidths="false"
+                          markerType="CIRCLE"
+                          position="BOTTOM"/>
+            <chart:allLabels>
+                <chart:label bold="true"
+                             size="14"
+                             text="msg://carDelivery"
+                             x="10"
+                             y="10"/>
+            </chart:allLabels>
+        </chart:pieChart>
+    </layout>
+</window>

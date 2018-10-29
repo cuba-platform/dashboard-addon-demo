@@ -11,8 +11,7 @@
         <split id="foldersSplit">
             <main:workArea id="workArea">
                 <main:initialLayout>
-                    <dash:dashboard id="test"
-                                    referenceName="test"/>
+                    <dash:dashboard id="test" code="taxi-dashboard"/>
                 </main:initialLayout>
             </main:workArea>
         </split>

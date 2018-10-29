@@ -8,4 +8,19 @@
             template="com/haulmont/demo/dashboard/web/widget/userInfoBrowser/userdisp-widget.xml"/>
     <screen id="dashboard-demo$ClockWidget"
             template="com/haulmont/demo/dashboard/web/widget/clock/clock-widget.xml"/>
+    <!--Sample dashboard-->
+    <screen id="dashboard-demo$AverageTime"
+            template="com/haulmont/demo/dashboard/web/widget/sample/averagetriptime/average-time-widget.xml"/>
+    <screen id="dashboard-demo$Bookings"
+            template="com/haulmont/demo/dashboard/web/widget/sample/bookings/bookings-widget.xml"/>
+    <screen id="dashboard-demo$CarDelivery"
+            template="com/haulmont/demo/dashboard/web/widget/sample/cardelivery/cardelivery-widget.xml"/>
+    <screen id="dashboard-demo$CarMap"
+            template="com/haulmont/demo/dashboard/web/widget/sample/carmap/car-map-widget.xml"/>
+    <screen id="dashboard-demo$InProgress"
+            template="com/haulmont/demo/dashboard/web/widget/sample/inprogress/inprogress-widget.xml"/>
+    <screen id="dashboard-demo$Online"
+            template="com/haulmont/demo/dashboard/web/widget/sample/online/online-widget.xml"/>
+    <screen id="dashboard-demo$Redes"
+            template="com/haulmont/demo/dashboard/web/widget/sample/rides/rides-widget.xml"/>
 </screen-config>

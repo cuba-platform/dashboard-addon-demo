@@ -1,4 +1,7 @@
 /* Define your theme modifications inside next mixin */
-@mixin com_haulmont_demo_dashboard-halo-ext {
 
+@import "dashboard";
+
+@mixin com_haulmont_demo_dashboard-halo-ext {
+    @include taxi-dashboard;
 }
