@@ -30,6 +30,7 @@ public class CarMapWidget extends AbstractFrame {
     @Override
     public void init(Map<String, Object> params) {
         super.init(params);
+        initMap();
     }
 
     private void initMap() {
