@@ -13,7 +13,7 @@
                         creditsPosition="bottom-left"
                         stylename="pie-chart"
                         depth3D="0"
-                        height="250px"
+                        height="100%"
                         labelsEnabled="false"
                         marginTop="35"
                         radius="35%"
