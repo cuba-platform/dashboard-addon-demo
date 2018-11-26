@@ -1,5 +1,5 @@
 # Dashboard CUBA Addon Demo Application
-This demo application demonstrates the usage of [Dashboard](https://https://github.com/cuba-platform/dashboard-addon) CUBA add-on.
+This demo application demonstrates the usage of [Dashboard](https://github.com/cuba-platform/dashboard-addon) CUBA add-on.
 
 ## Sample data
 This demo project contains examples of the dashboard usage, such as creating custom widgets, apply dashboard to main application window, creating interaction between widgets and dashboard, creating responsive and non responsive dashboards.  
