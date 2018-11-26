@@ -2,8 +2,6 @@
 buildscript {
     ext.cubaVersion = '6.10.2'
     repositories {
-        
-        mavenLocal()
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
             credentials {
@@ -51,8 +49,8 @@ cuba {
 
 dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
-    appComponent("com.haulmont.addon.dashboard:dashboard-global:2.0-SNAPSHOT")
-    appComponent("com.haulmont.addon.dashboardchart:dashboardchart-global:0.1-SNAPSHOT")
+    appComponent("com.haulmont.addon.dashboard:dashboard-global:2.0.0")
+    appComponent("com.haulmont.addon.dashboardchart:dashboardchart-global:1.0.0")
 
 }
 

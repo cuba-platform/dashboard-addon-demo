@@ -1,6 +1,718 @@
-INSERT INTO dashboard_persistent_dashboard (id, version, create_ts, created_by, update_ts, updated_by, delete_ts, deleted_by, dashboard_model, name, reference_name, group_id, is_available_for_all_users) VALUES
-('793166aa-d80d-19ac-2892-a3e34dbe62fb', 1, '2018-10-03 21:04:15.986', 'admin', '2018-10-03 21:04:15.986', NULL, NULL, NULL, '{"title":"test","referenceName":"test","visualModel":{"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.GridLayout","data":{"rows":2,"columns":2,"areas":[{"component":{"className":"com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout","data":{"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"widgetId":"lookup","caption":"lookup","name":"Lookup","description":"lookup","parameters":[],"widgetFields":[{"name":"lookupWindowId","parameterValue":{"className":"com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue","data":{"value":"sec$User.lookup"}},"id":"8ea1db0c-e878-9522-c5cc-af4e3a9863b2","__new":true,"__detached":false,"__removed":false}],"browseFrameId":"dashboard$LookupWidget","createdBy":"admin","id":"9c802dcc-5762-6559-56cd-d4ddeb082a2d","__new":true,"__detached":false,"__removed":false},"children":[],"weight":1,"id":"33de51a2-e9d4-0f53-830d-9d8d6bdceaa3","__new":true,"__detached":false,"__removed":false}}],"weight":1,"id":"c03129b4-fb93-0b27-4e72-baddf3315496","__new":true,"__detached":false,"__removed":false}},"row1":0,"col1":0,"id":"e8cd557d-b58c-87f6-0075-aeefcf98066b","__new":true,"__detached":false,"__removed":false},{"component":{"className":"com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout","data":{"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"widgetId":"userInfo","caption":"userInfo","name":"UserInfo","description":"userInfo","parameters":[],"widgetFields":[],"browseFrameId":"dashboard-demo$UserDisplayWidget","createdBy":"admin","id":"fd0bc134-63ca-1095-386d-7d51f7ccfa18","__new":true,"__detached":false,"__removed":false},"children":[],"weight":1,"id":"00f1c9b1-e76f-4e93-6e15-37f486b33fa8","__new":true,"__detached":false,"__removed":false}}],"weight":1,"id":"91cdc7fa-19b7-cbe5-6be2-aaebbf0c0188","__new":true,"__detached":false,"__removed":false}},"row1":0,"col1":1,"id":"1bd4ea31-6eea-85e2-812f-56bab6d61f38","__new":true,"__detached":false,"__removed":false},{"component":{"className":"com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout","data":{"children":[],"weight":1,"id":"c673df71-fa78-063e-4caa-1f2f54def13b","__new":true,"__detached":false,"__removed":false}},"row1":1,"col1":1,"id":"de545eef-7d8a-6cd5-768e-7af6f52a23f0","__new":true,"__detached":false,"__removed":false},{"component":{"className":"com.haulmont.addon.dashboard.model.visualmodel.GridCellLayout","data":{"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"widgetId":"clock","caption":"clock","name":"Clock","description":"clock","parameters":[],"widgetFields":[],"browseFrameId":"dashboard-demo$ClockWidget","createdBy":"admin","id":"1d84bf45-0bac-0f95-675f-a57a628ae31e","__new":true,"__detached":false,"__removed":false},"children":[],"weight":1,"id":"71a2ce90-6552-cf27-425f-59e4455289c8","__new":true,"__detached":false,"__removed":false}}],"weight":1,"id":"1bd90606-5239-8234-e6f2-ab6d6ec42635","__new":true,"__detached":false,"__removed":false}},"row1":1,"col1":0,"id":"1f0466c9-05f6-bde9-8a19-6231ddc1ac21","__new":true,"__detached":false,"__removed":false}],"children":[],"weight":1,"id":"8d388c9c-a04f-d8fb-af06-269d4519723a","__new":true,"__detached":false,"__removed":false}}],"weight":1,"id":"f07e41c1-86a6-5937-f5ad-8ff5c09c74d1","__new":true,"__detached":false,"__removed":false},"parameters":[],"isAvailableForAllUsers":true,"createdBy":"admin","timerDelay":1,"assistantBeanName":"clockAssistant","id":"6d93ff40-1f90-5278-3c89-d7f599d3ee31","__new":true,"__detached":false,"__removed":false}', 'test', 'test', NULL, true);
+insert into DASHBOARD_PERSISTENT_DASHBOARD
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
+values ('1e5ebc83-fca6-5b4c-ffed-bba64c61eb24', 34, '2018-10-29 12:06:15', 'admin', '2018-11-21 17:28:50', 'admin', null, null, '{
+  "title": "Taxi dashboard (responsive)",
+  "code": "taxi-dashboard",
+  "visualModel": {
+    "children": [
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.CssLayout",
+        "data": {
+          "responsive": true,
+          "children": [
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.CssLayout",
+              "data": {
+                "responsive": false,
+                "children": [
+                  {
+                    "className": "com.haulmont.addon.dashboard.model.visualmodel.CssLayout",
+                    "data": {
+                      "responsive": false,
+                      "children": [
+                        {
+                          "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                          "data": {
+                            "widget": {
+                              "showWidgetCaption": false,
+                              "widgetId": "Bookings",
+                              "caption": "Bookings",
+                              "name": "Bookings",
+                              "description": null,
+                              "parameters": [],
+                              "widgetFields": [],
+                              "frameId": "dashboard-demo$Bookings",
+                              "browseFrameId": null,
+                              "createdBy": "admin",
+                              "id": "de11f42e-8924-317a-8390-af7f14a979ff",
+                              "_persistence_fetchGroup": null
+                            },
+                            "children": [],
+                            "weight": 1,
+                            "expand": null,
+                            "styleName": "panel-top-container panel",
+                            "width": 100,
+                            "height": 188,
+                            "widthUnit": "%",
+                            "heightUnit": "px",
+                            "id": "987d932e-99c2-2b39-fce8-3e0a388ed333",
+                            "_persistence_fetchGroup": null
+                          }
+                        },
+                        {
+                          "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                          "data": {
+                            "widget": {
+                              "showWidgetCaption": false,
+                              "widgetId": "In progress",
+                              "caption": "In progress",
+                              "name": "In progress",
+                              "description": null,
+                              "parameters": [],
+                              "widgetFields": [],
+                              "frameId": "dashboard-demo$InProgress",
+                              "browseFrameId": null,
+                              "createdBy": "admin",
+                              "id": "36766245-33d7-5e83-c267-4f12b5e1f365",
+                              "_persistence_fetchGroup": null
+                            },
+                            "children": [],
+                            "weight": 1,
+                            "expand": null,
+                            "styleName": "panel-top-container panel",
+                            "width": 100,
+                            "height": 188,
+                            "widthUnit": "%",
+                            "heightUnit": "px",
+                            "id": "96d1d6c9-5153-ebec-c78e-f4c7217c4d76",
+                            "_persistence_fetchGroup": null
+                          }
+                        },
+                        {
+                          "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                          "data": {
+                            "widget": {
+                              "showWidgetCaption": false,
+                              "widgetId": "Average trip time",
+                              "caption": "Average trip time",
+                              "name": "Average trip time",
+                              "description": null,
+                              "parameters": [],
+                              "widgetFields": [],
+                              "frameId": "dashboard-demo$AverageTime",
+                              "browseFrameId": null,
+                              "createdBy": "admin",
+                              "id": "ab84b9f5-0b05-a84d-b870-6b7f893adab1",
+                              "_persistence_fetchGroup": null
+                            },
+                            "children": [],
+                            "weight": 1,
+                            "expand": null,
+                            "styleName": "panel-top-container panel",
+                            "width": 100,
+                            "height": 188,
+                            "widthUnit": "%",
+                            "heightUnit": "px",
+                            "id": "c56ad72a-3eab-7dfc-a685-3c2f050b0e90",
+                            "_persistence_fetchGroup": null
+                          }
+                        },
+                        {
+                          "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                          "data": {
+                            "widget": {
+                              "showWidgetCaption": false,
+                              "widgetId": "Online",
+                              "caption": "Online",
+                              "name": "Online",
+                              "description": null,
+                              "parameters": [],
+                              "widgetFields": [],
+                              "frameId": "dashboard-demo$Online",
+                              "browseFrameId": null,
+                              "createdBy": "admin",
+                              "id": "156b930f-07e5-69e1-2d77-c79c0e483961",
+                              "_persistence_fetchGroup": null
+                            },
+                            "children": [],
+                            "weight": 1,
+                            "expand": null,
+                            "styleName": "panel-top-container panel",
+                            "width": 100,
+                            "height": 188,
+                            "widthUnit": "%",
+                            "heightUnit": "px",
+                            "id": "e88307a6-4ecd-e370-fdac-8caca05e7e2b",
+                            "_persistence_fetchGroup": null
+                          }
+                        }
+                      ],
+                      "weight": 1,
+                      "expand": null,
+                      "styleName": "mainbody",
+                      "width": 100,
+                      "height": -1,
+                      "widthUnit": "%",
+                      "heightUnit": "px",
+                      "id": "ae45b22b-bfd1-2af3-9bb0-551698eabb05",
+                      "_persistence_fetchGroup": null
+                    }
+                  },
+                  {
+                    "className": "com.haulmont.addon.dashboard.model.visualmodel.CssLayout",
+                    "data": {
+                      "responsive": true,
+                      "children": [
+                        {
+                          "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                          "data": {
+                            "widget": {
+                              "showWidgetCaption": false,
+                              "widgetId": "Map",
+                              "caption": "Map",
+                              "name": "Car map",
+                              "description": null,
+                              "parameters": [],
+                              "widgetFields": [],
+                              "frameId": "dashboard-demo$CarMap",
+                              "browseFrameId": null,
+                              "createdBy": "admin",
+                              "id": "38d6bbdb-0b22-3692-d85f-089f92011425",
+                              "_persistence_fetchGroup": null
+                            },
+                            "children": [],
+                            "weight": 1,
+                            "expand": null,
+                            "styleName": "panel-full-container panel",
+                            "width": 100,
+                            "height": 100,
+                            "widthUnit": "%",
+                            "heightUnit": "%",
+                            "id": "8a4054ad-0944-499d-4941-28e86c31319c",
+                            "_persistence_fetchGroup": null
+                          }
+                        },
+                        {
+                          "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                          "data": {
+                            "widget": {
+                              "showWidgetCaption": false,
+                              "widgetId": "Car delivery",
+                              "caption": "Car delivery",
+                              "name": "Car delivery",
+                              "description": null,
+                              "parameters": [],
+                              "widgetFields": [],
+                              "frameId": "dashboard-demo$CarDelivery",
+                              "browseFrameId": null,
+                              "createdBy": "admin",
+                              "id": "3c0178f4-c826-e15c-58a1-e4f382fcc843",
+                              "_persistence_fetchGroup": null
+                            },
+                            "children": [],
+                            "weight": 1,
+                            "expand": null,
+                            "styleName": "panel-container panel",
+                            "width": 100,
+                            "height": 100,
+                            "widthUnit": "%",
+                            "heightUnit": "%",
+                            "id": "76f33019-3f7e-0ba1-218e-2ee9a6f30ca0",
+                            "_persistence_fetchGroup": null
+                          }
+                        },
+                        {
+                          "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                          "data": {
+                            "widget": {
+                              "showWidgetCaption": false,
+                              "widgetId": "Rides",
+                              "caption": "Rides",
+                              "name": "Rides",
+                              "description": null,
+                              "parameters": [],
+                              "widgetFields": [],
+                              "frameId": "dashboard-demo$Redes",
+                              "browseFrameId": null,
+                              "createdBy": "admin",
+                              "id": "3d897f2e-5a6f-4f36-a4ed-fe048de06497",
+                              "_persistence_fetchGroup": null
+                            },
+                            "children": [],
+                            "weight": 1,
+                            "expand": null,
+                            "styleName": "panel-container panel-table panel",
+                            "width": 100,
+                            "height": 100,
+                            "widthUnit": "%",
+                            "heightUnit": "%",
+                            "id": "282a0f33-dc1a-37b8-343a-012dd8bb2a3c",
+                            "_persistence_fetchGroup": null
+                          }
+                        }
+                      ],
+                      "weight": 2,
+                      "expand": null,
+                      "styleName": "responsive",
+                      "width": 100,
+                      "height": 70,
+                      "widthUnit": "%",
+                      "heightUnit": "%",
+                      "id": "662031ed-2332-c5c2-ee28-a6efb31befd0",
+                      "_persistence_fetchGroup": null
+                    }
+                  }
+                ],
+                "weight": 1,
+                "expand": null,
+                "styleName": "responsive",
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "b8c629f0-c4c3-c496-c1ca-46726c748cf1",
+                "_persistence_fetchGroup": null
+              }
+            }
+          ],
+          "weight": 1,
+          "expand": null,
+          "styleName": "responsive-all",
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "8bb1bfcb-b68b-c2c3-fc05-c5f6ca889b77",
+          "_persistence_fetchGroup": null
+        }
+      }
+    ],
+    "weight": 1,
+    "expand": null,
+    "styleName": null,
+    "width": 100,
+    "height": 100,
+    "widthUnit": "%",
+    "heightUnit": "%",
+    "id": "4ef2625c-e958-3295-bc37-015732b2b623",
+    "_persistence_fetchGroup": null
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 0,
+  "assistantBeanName": null,
+  "id": "70c0caaa-9703-87f1-7ec2-e05fd85210d9",
+  "_persistence_fetchGroup": null
+}', 'Taxi dashboard (responsive)', 'taxi-dashboard', null, true);
 
 insert into DASHBOARD_PERSISTENT_DASHBOARD
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
-values ('1e5ebc83-fca6-5b4c-ffed-bba64c61eb24', 30, '2018-10-29 12:06:15', 'admin', '2018-11-07 11:20:36', 'admin', null, null, '{"title":"Taxi dashboard","code":"taxi-dashboard","visualModel":{"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.CssLayout","data":{"responsive":true,"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.CssLayout","data":{"responsive":false,"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.CssLayout","data":{"responsive":false,"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"showWidgetCaption":false,"widgetId":"Bookings","caption":"Bookings","name":"Bookings","description":null,"parameters":[],"widgetFields":[],"frameId":"dashboard-demo$Bookings","browseFrameId":null,"createdBy":"admin","id":"de11f42e-8924-317a-8390-af7f14a979ff","__new":false,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"children":[],"weight":1,"expand":null,"styleName":"panel-top-container panel","width":100,"height":188,"widthUnit":"%","heightUnit":"px","id":"987d932e-99c2-2b39-fce8-3e0a388ed333","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}},{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"showWidgetCaption":false,"widgetId":"In progress","caption":"In progress","name":"In progress","description":null,"parameters":[],"widgetFields":[],"frameId":"dashboard-demo$InProgress","browseFrameId":null,"createdBy":"admin","id":"36766245-33d7-5e83-c267-4f12b5e1f365","__new":false,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"children":[],"weight":1,"expand":null,"styleName":"panel-top-container panel","width":100,"height":188,"widthUnit":"%","heightUnit":"px","id":"96d1d6c9-5153-ebec-c78e-f4c7217c4d76","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}},{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"showWidgetCaption":false,"widgetId":"Average trip time","caption":"Average trip time","name":"Average trip time","description":null,"parameters":[],"widgetFields":[],"frameId":"dashboard-demo$AverageTime","browseFrameId":null,"createdBy":"admin","id":"ab84b9f5-0b05-a84d-b870-6b7f893adab1","__new":false,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"children":[],"weight":1,"expand":null,"styleName":"panel-top-container panel","width":100,"height":188,"widthUnit":"%","heightUnit":"px","id":"c56ad72a-3eab-7dfc-a685-3c2f050b0e90","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}},{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"showWidgetCaption":false,"widgetId":"Online","caption":"Online","name":"Online","description":null,"parameters":[],"widgetFields":[],"frameId":"dashboard-demo$Online","browseFrameId":null,"createdBy":"admin","id":"156b930f-07e5-69e1-2d77-c79c0e483961","__new":false,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"children":[],"weight":1,"expand":null,"styleName":"panel-top-container panel","width":100,"height":188,"widthUnit":"%","heightUnit":"px","id":"e88307a6-4ecd-e370-fdac-8caca05e7e2b","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}}],"weight":1,"expand":null,"styleName":"mainbody","width":100,"height":-1,"widthUnit":"%","heightUnit":"px","id":"ae45b22b-bfd1-2af3-9bb0-551698eabb05","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}},{"className":"com.haulmont.addon.dashboard.model.visualmodel.CssLayout","data":{"responsive":true,"children":[{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"showWidgetCaption":false,"widgetId":"Map","caption":"Map","name":"Car map","description":null,"parameters":[],"widgetFields":[],"frameId":"dashboard-demo$CarMap","browseFrameId":null,"createdBy":"admin","id":"38d6bbdb-0b22-3692-d85f-089f92011425","__new":false,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"children":[],"weight":1,"expand":null,"styleName":"panel-full-container panel","width":100,"height":100,"widthUnit":"%","heightUnit":"%","id":"8a4054ad-0944-499d-4941-28e86c31319c","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}},{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"showWidgetCaption":false,"widgetId":"Car delivery","caption":"Car delivery","name":"Car delivery","description":null,"parameters":[],"widgetFields":[],"frameId":"dashboard-demo$CarDelivery","browseFrameId":null,"createdBy":"admin","id":"3c0178f4-c826-e15c-58a1-e4f382fcc843","__new":false,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"children":[],"weight":1,"expand":null,"styleName":"panel-container panel","width":100,"height":100,"widthUnit":"%","heightUnit":"%","id":"76f33019-3f7e-0ba1-218e-2ee9a6f30ca0","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}},{"className":"com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout","data":{"widget":{"showWidgetCaption":false,"widgetId":"Rides","caption":"Rides","name":"Rides","description":null,"parameters":[],"widgetFields":[],"frameId":"dashboard-demo$Redes","browseFrameId":null,"createdBy":"admin","id":"3d897f2e-5a6f-4f36-a4ed-fe048de06497","__new":false,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"children":[],"weight":1,"expand":null,"styleName":"panel-container panel-table panel","width":100,"height":100,"widthUnit":"%","heightUnit":"%","id":"282a0f33-dc1a-37b8-343a-012dd8bb2a3c","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}}],"weight":2,"expand":null,"styleName":"responsive","width":100,"height":100,"widthUnit":"%","heightUnit":"%","id":"662031ed-2332-c5c2-ee28-a6efb31befd0","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}}],"weight":1,"expand":null,"styleName":"responsive","width":100,"height":100,"widthUnit":"%","heightUnit":"%","id":"b8c629f0-c4c3-c496-c1ca-46726c748cf1","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}}],"weight":1,"expand":null,"styleName":"responsive-all","width":100,"height":100,"widthUnit":"%","heightUnit":"%","id":"8bb1bfcb-b68b-c2c3-fc05-c5f6ca889b77","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}}],"weight":1,"expand":null,"styleName":null,"width":100,"height":100,"widthUnit":"%","heightUnit":"%","id":"4ef2625c-e958-3295-bc37-015732b2b623","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null},"parameters":[],"isAvailableForAllUsers":true,"createdBy":"admin","timerDelay":0,"assistantBeanName":null,"id":"70c0caaa-9703-87f1-7ec2-e05fd85210d9","__new":true,"__detached":false,"__removed":false,"__securityState":null,"dynamicAttributes":null,"_persistence_fetchGroup":null}', 'Taxi dashboard', 'taxi-dashboard', null, true);
+values ('5d5604b3-c482-8177-67e5-fa74e570bdc2', 5, '2018-11-07 14:09:50', 'admin', '2018-11-21 17:21:38', 'admin', null, null, '{
+  "title": "Demo dashboard",
+  "code": "demo-dashboard",
+  "visualModel": {
+    "children": [
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+        "data": {
+          "widget": {
+            "showWidgetCaption": true,
+            "widgetId": "clock",
+            "caption": "Clock",
+            "name": "Clock",
+            "description": null,
+            "parameters": [],
+            "widgetFields": [],
+            "frameId": "dashboard-demo$ClockWidget",
+            "browseFrameId": null,
+            "createdBy": "admin",
+            "id": "93110274-c0b4-eef7-1e11-7ca36ef597ae",
+            "_persistence_fetchGroup": null
+          },
+          "children": [],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": -1,
+          "widthUnit": "%",
+          "heightUnit": "px",
+          "id": "a0a14db0-6d7b-b106-a061-944c6dfacc82",
+          "_persistence_fetchGroup": null
+        }
+      },
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.HorizontalLayout",
+        "data": {
+          "children": [
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": true,
+                  "widgetId": "Users",
+                  "caption": "Users",
+                  "name": "Lookup",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [
+                    {
+                      "name": "lookupWindowId",
+                      "alias": "lookupWindowId",
+                      "parameterValue": {
+                        "className": "com.haulmont.addon.dashboard.model.paramtypes.StringParameterValue",
+                        "data": {
+                          "value": "sec$User.browse"
+                        }
+                      },
+                      "id": "703b589d-f731-596b-6baa-7dc7f2e01a35",
+                      "_persistence_fetchGroup": null
+                    }
+                  ],
+                  "frameId": "dashboard$LookupWidget",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "50c73ae5-7cbc-3c1c-5c72-5cde00e019ec",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "75a68941-8be5-cc15-91c5-af4b6d622d8e",
+                "_persistence_fetchGroup": null
+              }
+            },
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": true,
+                  "widgetId": "User Info",
+                  "caption": "User Info",
+                  "name": "UserInfo",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$UserDisplayWidget",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "aca83398-a08e-67d2-98bc-c34276ae2329",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "9c347d0d-086a-f38b-f2de-44e8ad62829d",
+                "_persistence_fetchGroup": null
+              }
+            }
+          ],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "0ccc8cc9-b9f5-397c-605d-506c18cef031",
+          "_persistence_fetchGroup": null
+        }
+      }
+    ],
+    "weight": 1,
+    "expand": "0ccc8cc9-b9f5-397c-605d-506c18cef031",
+    "styleName": null,
+    "width": 100,
+    "height": 100,
+    "widthUnit": "%",
+    "heightUnit": "%",
+    "id": "ec917c3e-deaf-88ec-e9b2-42ac539fd669",
+    "_persistence_fetchGroup": null
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 1,
+  "assistantBeanName": "clockAssistant",
+  "id": "cfc85253-2e3b-5040-fa40-a8778e6223ed",
+  "_persistence_fetchGroup": null
+}', 'Demo dashboard', 'demo-dashboard', null, true);
+
+insert into DASHBOARD_PERSISTENT_DASHBOARD
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
+values ('87399dae-47d9-1b26-849b-fd80cf0886a0', 6, '2018-11-07 14:50:00', 'admin', '2018-11-21 17:28:58', 'admin', null, null, '{
+  "title": "Taxi dashboard (non responsive)",
+  "code": "taxi-non-responsive",
+  "visualModel": {
+    "children": [
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.HorizontalLayout",
+        "data": {
+          "children": [
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": false,
+                  "widgetId": "Bookings",
+                  "caption": "Bookings",
+                  "name": "Bookings",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$Bookings",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "0a27167e-a243-ea19-15ed-be12ba01d441",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "aa9a7936-6f3c-3be8-ab18-0928956f07f8",
+                "_persistence_fetchGroup": null
+              }
+            },
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": false,
+                  "widgetId": "In progress",
+                  "caption": "In progress",
+                  "name": "In progress",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$InProgress",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "12988ad2-613a-6780-bb9b-cb15ca343f85",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "d043475a-68d7-8155-9b6c-621a28837e2e",
+                "_persistence_fetchGroup": null
+              }
+            },
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": false,
+                  "widgetId": "Average time",
+                  "caption": "Average time",
+                  "name": "Average trip time",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$AverageTime",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "c64d2a7c-262d-3bf6-c2cc-c6b884ec0f9b",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "0c5fbf3e-a25f-7221-df36-3f86fd12aa88",
+                "_persistence_fetchGroup": null
+              }
+            },
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": false,
+                  "widgetId": "Online",
+                  "caption": "Online",
+                  "name": "Online",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$Online",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "48c3e369-f496-4ecc-45c4-61e69b265e0a",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "3dc79d18-4536-811e-f379-431c7bd7bb82",
+                "_persistence_fetchGroup": null
+              }
+            }
+          ],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "e4e033dd-1d06-b2f8-98b7-cc18739e2979",
+          "_persistence_fetchGroup": null
+        }
+      },
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.VerticalLayout",
+        "data": {
+          "children": [
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": false,
+                  "widgetId": "Map",
+                  "caption": "Map",
+                  "name": "Car map",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$CarMap",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "0e07296b-9895-cab8-92c6-894314256f38",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "f2aea675-a81a-c300-8ad8-d60bc4d1a51f",
+                "_persistence_fetchGroup": null
+              }
+            }
+          ],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "55eb0d48-6b7a-7cb5-0a41-0914fe4979a5",
+          "_persistence_fetchGroup": null
+        }
+      },
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.HorizontalLayout",
+        "data": {
+          "children": [
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": false,
+                  "widgetId": "Car delivery",
+                  "caption": "Car delivery",
+                  "name": "Car delivery",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$CarDelivery",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "edbd0613-54d4-16b7-3235-260a609f2b67",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "38f14265-9d3a-b423-7acd-b0a49c628fba",
+                "_persistence_fetchGroup": null
+              }
+            },
+            {
+              "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+              "data": {
+                "widget": {
+                  "showWidgetCaption": false,
+                  "widgetId": "Rides",
+                  "caption": "Rides",
+                  "name": "Rides",
+                  "description": null,
+                  "parameters": [],
+                  "widgetFields": [],
+                  "frameId": "dashboard-demo$Redes",
+                  "browseFrameId": null,
+                  "createdBy": "admin",
+                  "id": "156365ee-f2c3-f2b6-96c7-b7778526a10a",
+                  "_persistence_fetchGroup": null
+                },
+                "children": [],
+                "weight": 1,
+                "expand": null,
+                "styleName": null,
+                "width": 100,
+                "height": 100,
+                "widthUnit": "%",
+                "heightUnit": "%",
+                "id": "0e2003d8-80c4-2569-c8a6-1ca20b51d924",
+                "_persistence_fetchGroup": null
+              }
+            }
+          ],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "9e5b8e3f-57c1-cedb-2e91-4063190d708d",
+          "_persistence_fetchGroup": null
+        }
+      }
+    ],
+    "weight": 1,
+    "expand": null,
+    "styleName": null,
+    "width": 100,
+    "height": 100,
+    "widthUnit": "%",
+    "heightUnit": "%",
+    "id": "6225bde2-d3c2-0c57-2b55-355bf94cfcc1",
+    "_persistence_fetchGroup": null
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 0,
+  "assistantBeanName": null,
+  "id": "0eeb2bf9-5a0e-dfe6-79c0-932f3a2fd2db",
+  "_persistence_fetchGroup": null
+}', 'Taxi dashboard (non responsive)', 'taxi-non-responsive', null, true);

@@ -3,7 +3,7 @@
         class="com.haulmont.demo.dashboard.web.mainscreen.ReferenceDashboardController"
         extends="/com/haulmont/cuba/web/app/mainwindow/mainwindow.xml"
         messagesPack="com.haulmont.demo.dashboard.web.mainscreen"
-        xmlns:dash="http://schemas.haulmont.com/cubadshb/ui-component.xsd"
+        xmlns:dashboard="http://schemas.haulmont.com/cubadshb/ui-component.xsd"
         xmlns:main="http://schemas.haulmont.com/cuba/mainwindow.xsd">
     <dialogMode height="600"
                 width="800"/>
@@ -11,7 +11,7 @@
         <split id="foldersSplit">
             <main:workArea id="workArea">
                 <main:initialLayout>
-                    <dash:dashboard id="test" code="taxi-dashboard"/>
+                    <dashboard:dashboard id="test" code="taxi-dashboard"/>
                 </main:initialLayout>
             </main:workArea>
         </split>
