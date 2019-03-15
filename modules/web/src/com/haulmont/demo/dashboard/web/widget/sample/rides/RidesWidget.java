@@ -5,11 +5,11 @@
 package com.haulmont.demo.dashboard.web.widget.sample.rides;
 
 import com.haulmont.addon.dashboard.web.annotation.DashboardWidget;
+import com.haulmont.cuba.gui.UiComponents;
 import com.haulmont.cuba.gui.components.AbstractFrame;
 import com.haulmont.cuba.gui.components.Label;
 import com.haulmont.cuba.gui.components.Table;
 import com.haulmont.cuba.gui.data.CollectionDatasource;
-import com.haulmont.cuba.gui.xml.layout.ComponentsFactory;
 import com.haulmont.demo.dashboard.route.Route;
 
 import javax.inject.Inject;
@@ -30,7 +30,7 @@ public class RidesWidget extends AbstractFrame {
     private CollectionDatasource<Route, UUID> routeDs;
 
     @Inject
-    private ComponentsFactory componentsFactory;
+    private UiComponents components;
 
     @Override
     public void init(Map<String, Object> params) {
@@ -47,7 +47,7 @@ public class RidesWidget extends AbstractFrame {
         routeDs.addItem(new Route("02:27", "1098 Lexington St", "1313 Franklin St"));
 
         routesTable.addGeneratedColumn("direction", routes -> {
-            Label dataTypeLabel = componentsFactory.createComponent(Label.class);
+            Label<String> dataTypeLabel = components.create(Label.class);
             dataTypeLabel.setValue("\u2192");
             dataTypeLabel.setStyleName("direction");
             return dataTypeLabel;
