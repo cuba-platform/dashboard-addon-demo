@@ -1,0 +1,11 @@
+@import "havana-defaults";
+@import "com.haulmont.demo.dashboard/havana-ext-defaults";
+@import "app-components";
+@import "com.haulmont.demo.dashboard/havana-ext";
+
+.havana {
+  // include auto-generated app components SCSS
+  @include app_components;
+
+  @include com_haulmont_demo_dashboard-havana-ext;
+}

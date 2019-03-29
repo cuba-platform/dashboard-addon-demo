@@ -11,11 +11,6 @@
               <option name="user" value="cuba" />
               <option name="password" value="cuba123" />
             </RepositoryModelState>
-            <RepositoryModelState>
-              <option name="url" value="https://repo.cuba-platform.com/content/groups/premium" />
-              <option name="user" value="180319001388" />
-              <option name="password" value="wA5eV7ByCl6d" />
-            </RepositoryModelState>
           </list>
         </option>
         <option name="appComponents">
@@ -60,7 +55,8 @@
     </option>
     <option name="dbArtifacts">
       <map>
-        <entry key="com.haulmont.addon.dashboard" value="C:\Users\zahar\.m2\repository\com\haulmont\addon\dashboard\dashboard-core\3.0-SNAPSHOT\dashboard-core-3.0-SNAPSHOT-db.zip" />
+        <entry key="com.haulmont.addon.dashboard" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.addon.dashboard\dashboard-core\3.0-SNAPSHOT\166e95515b60a965c11589d36f033ae58fe7f398\dashboard-core-3.0-SNAPSHOT-db.zip" />
+        <entry key="com.haulmont.addon.dashboardchart" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.addon.dashboardchart\dashboardchart-core\1.1-SNAPSHOT\38a8bbc93cb6a4b545991d1a809a327966b390eb\dashboardchart-core-1.1-SNAPSHOT-db.zip" />
         <entry key="com.haulmont.cuba" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.cuba\cuba-core\7.0.2\7bb83ac7d1ece65f05a79c71f04648f957a13992\cuba-core-7.0.2-db.zip" />
         <entry key="com.haulmont.reports" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.reports\reports-core\7.0.2\e1dd4b84f288680c0f59902b318d336eb99f4827\reports-core-7.0.2-db.zip" />
       </map>

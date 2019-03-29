@@ -1,0 +1,5 @@
+@import "havana-ext";
+
+@mixin com_haulmont_demo_dashboard {
+  @include com_haulmont_demo_dashboard-havana-ext;
+}
