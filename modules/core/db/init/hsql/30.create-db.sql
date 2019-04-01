@@ -294,7 +294,7 @@ values ('1e5ebc83-fca6-5b4c-ffed-bba64c61eb24', 34, '2018-10-29 12:06:15', 'admi
   "assistantBeanName": null,
   "id": "70c0caaa-9703-87f1-7ec2-e05fd85210d9",
   "_persistence_fetchGroup": null
-}', 'Taxi dashboard (responsive)', 'taxi-dashboard', null, true);
+}', 'Taxi dashboard (responsive css)', 'taxi-dashboard-css', null, true);
 
 insert into DASHBOARD_PERSISTENT_DASHBOARD
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
@@ -716,3 +716,383 @@ values ('87399dae-47d9-1b26-849b-fd80cf0886a0', 6, '2018-11-07 14:50:00', 'admin
   "id": "0eeb2bf9-5a0e-dfe6-79c0-932f3a2fd2db",
   "_persistence_fetchGroup": null
 }', 'Taxi dashboard (non responsive)', 'taxi-non-responsive', null, true);
+
+insert into DASHBOARD_PERSISTENT_DASHBOARD
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
+values ('b21867d5-3966-419e-fab4-4296c629c8d8', 59, '2018-10-29 12:06:15', 'admin', '2019-04-01 15:50:23', 'admin', null, null, '{
+  "title": "Taxi dashboard (responsive)",
+  "code": "taxi-dashboard",
+  "visualModel": {
+    "children": [
+      {
+        "className": "com.haulmont.addon.dashboard.model.visualmodel.ResponsiveLayout",
+        "data": {
+          "xs": 12,
+          "sm": 6,
+          "md": 6,
+          "lg": 3,
+          "areas": [
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "Map",
+                    "caption": "Map",
+                    "name": "Car map",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "dashboard-demo$CarMap",
+                    "createdBy": "admin",
+                    "id": "38d6bbdb-0b22-3692-d85f-089f92011425",
+                    "__state": 1,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 300,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "8a4054ad-0944-499d-4941-28e86c31319c",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 5,
+              "xs": 12,
+              "sm": 12,
+              "md": 12,
+              "lg": 12,
+              "id": "ee2db2b7-4d86-8772-eb5c-d52e696abc66",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "In progress",
+                    "caption": "In progress",
+                    "name": "In progress",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "dashboard-demo$InProgress",
+                    "createdBy": "admin",
+                    "id": "36766245-33d7-5e83-c267-4f12b5e1f365",
+                    "__state": 1,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 250,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "96d1d6c9-5153-ebec-c78e-f4c7217c4d76",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 3,
+              "xs": null,
+              "sm": null,
+              "md": null,
+              "lg": null,
+              "id": "52801115-a01e-f138-37ee-c45f70366e15",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "Bookings",
+                    "caption": "Bookings",
+                    "name": "Bookings",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "dashboard-demo$Bookings",
+                    "createdBy": "admin",
+                    "id": "de11f42e-8924-317a-8390-af7f14a979ff",
+                    "__state": 1,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 250,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "987d932e-99c2-2b39-fce8-3e0a388ed333",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 1,
+              "xs": null,
+              "sm": null,
+              "md": null,
+              "lg": null,
+              "id": "d835a9cd-a5fe-b0aa-24d2-d891fec464b8",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "Average trip time",
+                    "caption": "Average trip time",
+                    "name": "Average trip time",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "dashboard-demo$AverageTime",
+                    "createdBy": "admin",
+                    "id": "ab84b9f5-0b05-a84d-b870-6b7f893adab1",
+                    "__state": 1,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 250,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "c56ad72a-3eab-7dfc-a685-3c2f050b0e90",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 2,
+              "xs": null,
+              "sm": null,
+              "md": null,
+              "lg": null,
+              "id": "c8a948fd-ab01-6d16-4f5a-400ee63dfb49",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "Online",
+                    "caption": "Online",
+                    "name": "Online",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "dashboard-demo$Online",
+                    "createdBy": "admin",
+                    "id": "156b930f-07e5-69e1-2d77-c79c0e483961",
+                    "__state": 1,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 250,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "e88307a6-4ecd-e370-fdac-8caca05e7e2b",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 4,
+              "xs": null,
+              "sm": null,
+              "md": null,
+              "lg": null,
+              "id": "66b8dafc-12ac-70aa-bcec-845df63e2b3a",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "Car delivery",
+                    "caption": "Car delivery",
+                    "name": "Car delivery",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "dashboard-demo$CarDelivery",
+                    "createdBy": "admin",
+                    "id": "3c0178f4-c826-e15c-58a1-e4f382fcc843",
+                    "__state": 1,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 320,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "76f33019-3f7e-0ba1-218e-2ee9a6f30ca0",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 6,
+              "xs": 12,
+              "sm": 12,
+              "md": 6,
+              "lg": 6,
+              "id": "0d3e2506-f070-748b-ad6b-416b8d46e938",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            },
+            {
+              "component": {
+                "className": "com.haulmont.addon.dashboard.model.visualmodel.WidgetLayout",
+                "data": {
+                  "widget": {
+                    "showWidgetCaption": false,
+                    "widgetId": "Rides",
+                    "caption": "Rides",
+                    "name": "Rides",
+                    "description": null,
+                    "parameters": [],
+                    "widgetFields": [],
+                    "frameId": "dashboard-demo$Redes",
+                    "createdBy": "admin",
+                    "id": "3d897f2e-5a6f-4f36-a4ed-fe048de06497",
+                    "__state": 1,
+                    "__securityState": null,
+                    "dynamicAttributes": null,
+                    "_persistence_fetchGroup": null
+                  },
+                  "children": [],
+                  "weight": 1,
+                  "expand": null,
+                  "styleName": null,
+                  "width": 100,
+                  "height": 320,
+                  "widthUnit": "%",
+                  "heightUnit": "px",
+                  "id": "282a0f33-dc1a-37b8-343a-012dd8bb2a3c",
+                  "__state": 1,
+                  "__securityState": null,
+                  "dynamicAttributes": null,
+                  "_persistence_fetchGroup": null
+                }
+              },
+              "order": 8,
+              "xs": 12,
+              "sm": 12,
+              "md": 6,
+              "lg": 6,
+              "id": "7248e61e-fa21-2f47-926d-d8ba16683dd1",
+              "__state": 1,
+              "__securityState": null,
+              "dynamicAttributes": null,
+              "_persistence_fetchGroup": null
+            }
+          ],
+          "children": [],
+          "weight": 1,
+          "expand": null,
+          "styleName": null,
+          "width": 100,
+          "height": 100,
+          "widthUnit": "%",
+          "heightUnit": "%",
+          "id": "2c028643-4b65-43ba-2e95-dec4cfe37ea6",
+          "__state": 1,
+          "__securityState": null,
+          "dynamicAttributes": null,
+          "_persistence_fetchGroup": null
+        }
+      }
+    ],
+    "weight": 1,
+    "expand": null,
+    "styleName": null,
+    "width": 100,
+    "height": 100,
+    "widthUnit": "%",
+    "heightUnit": "%",
+    "id": "4ef2625c-e958-3295-bc37-015732b2b623",
+    "__state": 1,
+    "__securityState": null,
+    "dynamicAttributes": null,
+    "_persistence_fetchGroup": null
+  },
+  "parameters": [],
+  "isAvailableForAllUsers": true,
+  "createdBy": "admin",
+  "timerDelay": 0,
+  "assistantBeanName": null,
+  "id": "70c0caaa-9703-87f1-7ec2-e05fd85210d9",
+  "__state": 1,
+  "__securityState": null,
+  "dynamicAttributes": null,
+  "_persistence_fetchGroup": null
+}', 'Taxi dashboard (responsive)', 'taxi-dashboard', null, true);
+
