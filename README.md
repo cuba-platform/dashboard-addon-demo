@@ -1,29 +1,26 @@
 # Dashboard CUBA Addon Demo Application
-This demo application demonstrates the usage of [Dashboard](https://github.com/cuba-platform/dashboard-addon) CUBA add-on.
+This demo application demonstrates the usage of [Dashboards](https://github.com/cuba-platform/dashboard-addon) CUBA add-on.
 
 ## Sample data
-This demo project contains examples of the dashboard usage, such as creating custom widgets, apply dashboard to main application window, creating interaction between widgets and dashboard, creating responsive and non responsive dashboards.  
+This demo project contains examples of the dashboard usage, such as creating custom widgets, apply dashboard to the main application window, creating interaction between widgets and a dashboard, creating responsive and nonresponsive dashboards.  
 ![main-screen](/img/main-screen.png)
 
-The following dashboards are created in demo application:
+The following dashboards are created in the demo application:
 
-**Taxi dashboard (non responsive)**
+**Taxi dashboard (nonresponsive)**
+
+Provides an example of using a simple nonresponsive dashboard.
 
 ![taxi-non-responsive](/img/taxi-non-responsive.png)
 
-Provide example of usage simple non responsive dashboard.
-
 **Taxi dashboard (responsive)**
 
-![taxi-responsive](/img/taxi-responsive.png)
+Provides an example of using an advanced responsive dashboard, based on CSS layouts.
 
-Provide example of usage advanced responsive dashboard, based on css layouts.
+![responsive-layout](/img/responsive-layout.gif)
 
 **Demo dashboard**
 
+Provides an example of using an interaction between a widget and a dashboard via dashboard assistant.
+
 ![demo](/img/demo.png)
-
-Provide example of usage interactions between widget and dashboard via dashboard assistant.
-
-## Notes
-Please note this demo project requires license for *Charts* and *Reports* CUBA addons.
