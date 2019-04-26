@@ -15,9 +15,15 @@ Provides an example of using a simple nonresponsive dashboard.
 
 **Taxi dashboard (responsive)**
 
-Provides an example of using an advanced responsive dashboard, based on CSS layouts.
+Provides an example of using a responsive dashboard.
 
 ![responsive-layout](/img/responsive-layout.gif)
+
+**Taxi dashboard (responsive css)**
+
+Provides an example of using an advanced responsive dashboard, based on CSS layouts.
+
+![responsive-layout](/img/taxi-responsive.png)
 
 **Demo dashboard**
 
