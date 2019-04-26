@@ -1,8 +1,7 @@
 
 buildscript {
-    ext.cubaVersion = '7.0.2'
+    ext.cubaVersion = '7.0.4'
     repositories {
-        mavenLocal()
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
             credentials {
@@ -47,7 +46,7 @@ dependencies {
 
 }
 
-def hsql = 'org.hsqldb:hsqldb:2.2.9'
+def hsql = 'org.hsqldb:hsqldb:2.4.1'
 
 configure([globalModule, coreModule, webModule]) {
     apply(plugin: 'java')
