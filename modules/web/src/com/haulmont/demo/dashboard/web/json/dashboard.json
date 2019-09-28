@@ -21,8 +21,8 @@
                   "__removed": false
                 }
               },
-              "row1": 1,
-              "col1": 1,
+              "row": 1,
+              "col": 1,
               "id": "8737b64f-2825-a63c-d54f-92caf5db0a1c",
               "__new": true,
               "__detached": false,
@@ -40,8 +40,8 @@
                   "__removed": false
                 }
               },
-              "row1": 1,
-              "col1": 0,
+              "row": 1,
+              "col": 0,
               "id": "985e694e-10a7-3d00-1ec1-c19418ab844d",
               "__new": true,
               "__detached": false,
@@ -113,8 +113,8 @@
                   "__removed": false
                 }
               },
-              "row1": 0,
-              "col1": 0,
+              "row": 0,
+              "col": 0,
               "id": "5afd9c08-0562-7e4e-c8eb-d474d8b6b2e6",
               "__new": true,
               "__detached": false,
@@ -132,8 +132,8 @@
                   "__removed": false
                 }
               },
-              "row1": 0,
-              "col1": 1,
+              "row": 0,
+              "col": 1,
               "id": "508ff6f8-67b7-2739-cab6-c66dddba0a1f",
               "__new": true,
               "__detached": false,
