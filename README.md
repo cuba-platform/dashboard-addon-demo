@@ -19,6 +19,15 @@ The application will start at [http://localhost:8080/dashboards](http://localhos
 
 Use `demo` as both login and password to access the application.
 
+### Google API Key configuration
+
+The sample uses Google Maps, so to set up Google API key set
+the `charts.map.apiKey` application property in the `web-app.properties` file:
+
+```Properties
+charts.map.apiKey = <YOUR_KEY_HERE>
+```
+
 ## Issues
 
 Please use https://www.cuba-platform.com/discuss for discussion, support,
