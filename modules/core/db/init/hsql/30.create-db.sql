@@ -1,3 +1,7 @@
+----------------------------------------------------------------------------------------------------
+-- Dashboards
+----------------------------------------------------------------------------------------------------
+
 insert into DASHBOARD_PERSISTENT_DASHBOARD
 (ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, DASHBOARD_MODEL, NAME, REFERENCE_NAME, GROUP_ID, IS_AVAILABLE_FOR_ALL_USERS)
 values ('1e5ebc83-fca6-5b4c-ffed-bba64c61eb24', 34, '2018-10-29 12:06:15', 'admin', '2018-11-21 17:28:50', 'admin', null, null, '{
@@ -245,7 +249,7 @@ values ('1e5ebc83-fca6-5b4c-ffed-bba64c61eb24', 34, '2018-10-29 12:06:15', 'admi
                       "expand": null,
                       "styleName": "responsive",
                       "width": 100,
-                      "height": 70,
+                      "height": 73,
                       "widthUnit": "%",
                       "heightUnit": "%",
                       "id": "662031ed-2332-c5c2-ee28-a6efb31befd0",
@@ -1096,3 +1100,73 @@ values ('b21867d5-3966-419e-fab4-4296c629c8d8', 59, '2018-10-29 12:06:15', 'admi
   "_persistence_fetchGroup": null
 }', 'Taxi dashboard (responsive)', 'taxi-dashboard', null, true);
 
+----------------------------------------------------------------------------------------------------
+-- Demo role
+----------------------------------------------------------------------------------------------------
+
+insert into SEC_ROLE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, NAME, LOC_NAME, DESCRIPTION, ROLE_TYPE, IS_DEFAULT_ROLE)
+values ('f517c42c-78d2-fdff-019a-f9be9207b268', 2, '2019-10-01 13:21:38', 'admin', '2019-10-01 13:23:19', 'admin', null, null, 'Demo', null, null, 20, null);
+
+----------------------------------------------------------------------------------------------------
+-- Demo role permissions
+----------------------------------------------------------------------------------------------------
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('15add329-1fd3-04ae-4975-99460ff5a38d', 1, '2019-10-01 14:36:56', 'admin', '2019-10-01 14:36:56', null, null, null, 10, 'extMainScreen', 1, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('c831e193-46da-543f-a854-10b048ebb24c', 1, '2019-10-01 14:36:56', 'admin', '2019-10-01 14:36:56', null, null, null, 10, 'reports', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('efaf719e-48bc-9a2a-3329-3cc8e8e3a478', 1, '2019-10-01 14:36:56', 'admin', '2019-10-01 14:36:56', null, null, null, 10, 'dashboard', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('4c01fb81-30a0-9912-eb63-a5aed1e18978', 1, '2019-10-01 14:36:56', 'admin', '2019-10-01 14:36:56', null, null, null, 10, 'administration', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5725b889-7e24-a335-49d7-4b8a41c28ea1', 1, '2019-10-01 14:36:56', 'admin', '2019-10-01 14:36:56', null, null, null, 10, 'help', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('bfd7dc27-2cae-940d-b102-e94fd574bd20', 1, '2019-10-01 14:35:31', 'admin', '2019-10-01 14:35:31', null, null, null, 50, 'extMainScreen:appTitleBox', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d9fdd064-5044-9629-48ec-8b52a9d46a31', 1, '2019-10-01 14:35:31', 'admin', '2019-10-01 14:35:31', null, null, null, 50, 'extMainScreen:mobileButtonsBox', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('fd6ff731-d846-7c50-1b34-bc1f997ea552', 1, '2019-10-01 14:35:31', 'admin', '2019-10-01 14:35:31', null, null, null, 50, 'extMainScreen:userIndicator', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('d1e6a587-c6ac-4267-cf91-e90a7f7c8c8e', 1, '2019-10-01 14:35:31', 'admin', '2019-10-01 14:35:31', null, null, null, 50, 'extMainScreen:timeZoneIndicator', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+insert into SEC_PERMISSION
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, PERMISSION_TYPE, TARGET, VALUE_, ROLE_ID)
+values ('5f5b1413-8303-aec1-cce3-bb89db61c0f5', 1, '2019-10-01 14:35:31', 'admin', '2019-10-01 14:35:31', null, null, null, 50, 'extMainScreen:mainButtonsBox', 0, 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+----------------------------------------------------------------------------------------------------
+-- Demo user
+----------------------------------------------------------------------------------------------------
+
+insert into SEC_USER
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, LOGIN, LOGIN_LC, PASSWORD, PASSWORD_ENCRYPTION, NAME, FIRST_NAME, LAST_NAME, MIDDLE_NAME, POSITION_, EMAIL, LANGUAGE_, TIME_ZONE, TIME_ZONE_AUTO, ACTIVE, CHANGE_PASSWORD_AT_LOGON, GROUP_ID, IP_MASK)
+values ('493ddfc6-eb25-a786-aca8-06906534b511', 2, '2019-10-01 13:21:46', 'admin', '2019-10-01 14:35:55', 'demo', null, null, 'demo', 'demo', '$2a$10$XAFJF40D92Rm/7VWyz8bauLlbwKsckTjDXcJ/jBu0UWFhtIMCXH2i', 'bcrypt', null, null, null, null, null, null, 'en', null, null, true, false, '0fa2b1a5-1d68-4d69-9fbd-dff348347f93', null);
+
+insert into SEC_USER_ROLE
+(ID, VERSION, CREATE_TS, CREATED_BY, UPDATE_TS, UPDATED_BY, DELETE_TS, DELETED_BY, USER_ID, ROLE_ID)
+values ('810ede2b-bbb1-f086-8f71-21365c91ac2d', 1, '2019-10-01 14:35:55', 'demo', '2019-10-01 14:35:55', null, null, null, '493ddfc6-eb25-a786-aca8-06906534b511', 'f517c42c-78d2-fdff-019a-f9be9207b268');
+
+----------------------------------------------------------------------------------------------------
+-- Changing administrator password
+----------------------------------------------------------------------------------------------------
+
+update SEC_USER set PASSWORD='$2a$10$BXl/gTmIhSQFMRCzCMXTSuvYV60tfw1Ngzrd2IMlG.5Q3okUkeLem', PASSWORD_ENCRYPTION='bcrypt'
+where ID='60885987-1b61-4247-94c7-dff348347f93';

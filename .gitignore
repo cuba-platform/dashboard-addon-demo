@@ -1,10 +1,16 @@
 .gradle
+
 .studio
+studio-intellij.xml
+studio-settings.xml
+
 *.ipr
 *.iml
 *.iws
+.idea
+
 build/*
-deploy/*
 modules/*/build/*
+deploy/*
 out
 test-run

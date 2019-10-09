@@ -1,38 +1,24 @@
 
 buildscript {
-    ext.cubaVersion = '7.1.0'
+    ext.cubaVersion = '7.1.1'
     repositories {
-        mavenLocal()
-        if (System.getenv('HAULMONT_REPOSITORY_URL')) {
-            maven {
-                credentials {
-                    username System.getenv('HAULMONT_REPOSITORY_USER')
-                    password System.getenv('HAULMONT_REPOSITORY_PASSWORD')
-                }
-                url System.getenv('HAULMONT_REPOSITORY_URL')
-            }
-        }
         maven {
-            url 'https://repo.cuba-platform.com/content/groups/work'
-            credentials {
-                username(rootProject.hasProperty('repoUser') ? rootProject['repoUser'] : 'cuba')
-                password(rootProject.hasProperty('repoPass') ? rootProject['repoPass'] : 'cuba123')
-            }
+            url 'https://dl.bintray.com/cuba-platform/main'
         }
+        jcenter()
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
     }
 }
 
-def modulePrefix = 'app'
+def modulePrefix = 'dashboards'
 
 def globalModule = project(":${modulePrefix}-global")
 def coreModule = project(":${modulePrefix}-core")
 def webModule = project(":${modulePrefix}-web")
 
 def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
-
 
 apply(plugin: 'cuba')
 
@@ -125,7 +111,7 @@ configure(coreModule) {
     task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
         dbms = 'hsql'
         host = 'localhost'
-        dbName = 'dashboarddemo'
+        dbName = 'dashboards'
         dbUser = 'sa'
         dbPassword = ''
     }
@@ -133,7 +119,7 @@ configure(coreModule) {
     task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
         dbms = 'hsql'
         host = 'localhost'
-        dbName = 'dashboarddemo'
+        dbName = 'dashboards'
         dbUser = 'sa'
         dbPassword = ''
     }
@@ -200,7 +186,6 @@ configure(webModule) {
     }
 }
 
-
 task undeploy(type: Delete, dependsOn: ":${modulePrefix}-web:cleanConf") {
     delete("$cuba.tomcat.dir/shared")
     delete("$cuba.tomcat.dir/webapps/${modulePrefix}-core")
@@ -218,3 +203,9 @@ task restart(dependsOn: ['stop', ":${modulePrefix}-core:deploy", ":${modulePrefi
     }
 }
 
+task buildUberJar(type: CubaUberJarBuilding) {
+    appProperties = ['cuba.automaticDatabaseUpdate': true]
+    coreJettyEnvPath = 'modules/core/web/META-INF/jetty-env.xml'
+    logbackConfigurationFile = 'etc/uber-jar-logback.xml'
+    singleJar = true
+}

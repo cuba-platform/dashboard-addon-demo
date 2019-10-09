@@ -251,7 +251,7 @@
     position: absolute;
     bottom: 10px;
     left: 0;
-    width: 200px;
+    width: 100%;
     text-align: center;
     color: #D1D1D1;
   }
@@ -308,19 +308,70 @@
     padding: 7px 0;
   }
 
+  .header-layout {
+    padding-left: $v-layout-margin-left;
+    padding-right: $v-layout-margin-right;
+  }
+
   .header {
-    font-size: 30px;
-    margin-top: 5px;
-    padding: 10px 10px 5px 10px;
+    font-size: $v-unit-size;
+    padding-left: $v-layout-margin-left;
   }
 
   .pie-chart a {
     width: 100%;
-    heigth: 100%!important;
+    height: 100% !important;
     text-align: center;
   }
 
   .dashboard-map {
 
+  }
+
+  .c-login-icon {
+    height: 40px;
+    width: 40px;
+  }
+
+  .c-sidemenu-item .v-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .c-sidemenu-item.menubutton-selected {
+    color: #ffffff;
+    background-color: #006BAC !important;
+  }
+
+  .c-sidemenu-item:hover {
+    background-color: #006bac !important;
+  }
+
+  .c-logout-button {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+
+    .v-icon {
+      font-size: $v-unit-size;
+    }
+  }
+
+  .c-logout-button:hover:after,
+  .c-logout-button:active:after {
+    background: none;
+  }
+
+  .c-sidemenu-responsive {
+    &[width-range~="801-1100px"] {
+      .cuba-full-link {
+        display: none;
+      }
+    }
+  }
+
+  .c-sidemenu-wrap .c-app-icon {
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
