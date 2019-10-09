@@ -3,7 +3,7 @@
 This demo application demonstrates the usage of 
 [Dashboards](https://github.com/cuba-platform/dashboard-addon) CUBA Add-on.
 
-![responsive-layout](./img/demo.png)
+![responsive-layout](./img/demo.jpg)
 
 ## Responsive layout
 
