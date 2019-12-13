@@ -9,7 +9,8 @@
             <RepositoryModelState>
               <option name="url" value="https://repo.cuba-platform.com/content/groups/work" />
               <option name="user" value="cuba" />
-              <option name="password" value="cuba123" />
+              <option name="pass" value="3r6+CXYTcUs=" />
+              <option name="stateVersion" value="2" />
             </RepositoryModelState>
           </list>
         </option>
@@ -18,35 +19,34 @@
             <DependencyModelState>
               <option name="group" value="com.haulmont.cuba" />
               <option name="name" value="cuba-global" />
-              <option name="version" value="7.0.2" />
+              <option name="version" value="7.1.0" />
             </DependencyModelState>
             <DependencyModelState>
               <option name="group" value="com.haulmont.reports" />
               <option name="name" value="reports-global" />
-              <option name="version" value="7.0.2" />
+              <option name="version" value="7.1.0" />
             </DependencyModelState>
             <DependencyModelState>
               <option name="group" value="com.haulmont.charts" />
               <option name="name" value="charts-global" />
-              <option name="version" value="7.0.2" />
-            </DependencyModelState>
-            <DependencyModelState>
-              <option name="group" value="com.haulmont.addon.dashboard" />
-              <option name="name" value="dashboard-global" />
-              <option name="version" value="3.0-SNAPSHOT" />
+              <option name="version" value="7.1.0" />
             </DependencyModelState>
             <DependencyModelState>
               <option name="group" value="com.haulmont.addon.dashboardchart" />
               <option name="name" value="dashboardchart-global" />
-              <option name="version" value="1.1-SNAPSHOT" />
+              <option name="version" value="1.1.0" />
+            </DependencyModelState>
+            <DependencyModelState>
+              <option name="group" value="com.haulmont.addon.dashboard" />
+              <option name="name" value="dashboard-global" />
+              <option name="version" value="3.1.1" />
             </DependencyModelState>
           </list>
         </option>
-        <option name="mavenLocal" value="true" />
         <option name="artifactGroup" value="com.haulmont.demo.dashboard" />
         <option name="artifactVersion" value="0.1" />
         <option name="artifactSnapshot" value="true" />
-        <option name="tomcatDir" value="C:\Users\zahar\Projects\Components\dashboard-addon-demo/deploy/tomcat" />
+        <option name="tomcatDir" value="D:\Projects\Components\dashboard-addon-demo/deploy/tomcat" />
         <option name="gradleVersion" value="4.10.3" />
         <option name="dbmsDbType" value="hsql" />
         <option name="oracleSystemUser" value="system" />
@@ -55,10 +55,10 @@
     </option>
     <option name="dbArtifacts">
       <map>
-        <entry key="com.haulmont.addon.dashboard" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.addon.dashboard\dashboard-core\3.0-SNAPSHOT\166e95515b60a965c11589d36f033ae58fe7f398\dashboard-core-3.0-SNAPSHOT-db.zip" />
-        <entry key="com.haulmont.addon.dashboardchart" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.addon.dashboardchart\dashboardchart-core\1.1-SNAPSHOT\38a8bbc93cb6a4b545991d1a809a327966b390eb\dashboardchart-core-1.1-SNAPSHOT-db.zip" />
-        <entry key="com.haulmont.cuba" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.cuba\cuba-core\7.0.2\7bb83ac7d1ece65f05a79c71f04648f957a13992\cuba-core-7.0.2-db.zip" />
-        <entry key="com.haulmont.reports" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.reports\reports-core\7.0.2\e1dd4b84f288680c0f59902b318d336eb99f4827\reports-core-7.0.2-db.zip" />
+        <entry key="com.haulmont.addon.dashboard" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.addon.dashboard\dashboard-core\3.1.1\e5e02efc7d90e9ceeebb0450b5027e0a0627a0db\dashboard-core-3.1.1-db.zip" />
+        <entry key="com.haulmont.addon.dashboardchart" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.addon.dashboardchart\dashboardchart-core\1.1.0\9853e1f46f558790ee0e8abb9c02dbefac8cd5ea\dashboardchart-core-1.1.0-db.zip" />
+        <entry key="com.haulmont.cuba" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.cuba\cuba-core\7.1.0\bf0d9c470956dfd2e63ffe69088e48b3f41f6747\cuba-core-7.1.0-db.zip" />
+        <entry key="com.haulmont.reports" value="C:\Users\zahar\.gradle\caches\modules-2\files-2.1\com.haulmont.reports\reports-core\7.1.0\fc2821451a3c2993362a22e978abc8feeb721dc4\reports-core-7.1.0-db.zip" />
       </map>
     </option>
   </component>
