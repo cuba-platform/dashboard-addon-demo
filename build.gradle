@@ -1,7 +1,17 @@
 
 buildscript {
-    ext.cubaVersion = '7.1.1'
+    ext.cubaVersion = '7.2-SNAPSHOT'
     repositories {
+        if (System.getenv('HAULMONT_REPOSITORY_URL')) {
+            maven {
+                credentials {
+                    username System.getenv('HAULMONT_REPOSITORY_USER')
+                    password System.getenv('HAULMONT_REPOSITORY_PASSWORD')
+                }
+                url System.getenv('HAULMONT_REPOSITORY_URL')
+            }
+        }
+
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
         }
