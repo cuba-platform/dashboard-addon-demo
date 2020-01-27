@@ -1,5 +1,13 @@
 # Dashboard CUBA Add-on Demo Application
 
+## Online Demo
+
+Please note that this branch (`online-demo`) is used for [online demo](https://demo10.cuba-platform.com/dashboards).
+
+Add custom samples and screens into the `master` branch.
+
+## Abstract
+
 This demo application demonstrates the usage of 
 [Dashboards](https://github.com/cuba-platform/dashboard-addon) CUBA Add-on.
 
