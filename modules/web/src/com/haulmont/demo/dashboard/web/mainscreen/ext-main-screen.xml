@@ -51,30 +51,18 @@
                               sidePanelToggleButton="mobileMenuButton"/>
                     <ftsField id="ftsField"
                               width="100%"/>
-                    <link icon="icons/cubalogo-full.png"
-                          stylename="cuba-full-link"
-                          target="_blank"
-                          url="https://www.cuba-platform.com"/>
                 </cssLayout>
             </cssLayout>
             <workArea id="workArea"
                       height="100%">
-                <initialLayout expand="dashboard">
-                    <hbox width="100%"
-                          stylename="header-layout"
-                          expand="heading"
-                          height="50px">
-                        <label id="heading"
-                               stylename="header"
-                               value="Dashboard"
-                               height="100%"/>
-                        <logoutButton id="logoutBtn"
-                                      description="msg://logout"
-                                      icon="app/images/exit.png"
-                                      height="100%"
-                                      width="40px"/>
-                    </hbox>
-                    <dashboard:dashboard id="dashboard" code="taxi-dashboard-css"/>
+                <initialLayout margin="true"
+                               spacing="true">
+                    <label id="welcomeLabel"
+                           align="MIDDLE_CENTER"
+                           width="100%"
+                           stylename="c-welcome-text"
+                           value="mainMsg://application.welcomeText"/>
+                    <dashboard:dashboard id="dashboard" code="taxi-dashboard"/>
                 </initialLayout>
             </workArea>
         </hbox>
