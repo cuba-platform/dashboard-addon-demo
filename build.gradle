@@ -1,4 +1,3 @@
-
 buildscript {
     ext.cubaVersion = '7.2-SNAPSHOT'
     repositories {
@@ -22,7 +21,7 @@ buildscript {
     }
 }
 
-def modulePrefix = 'dashboards'
+def modulePrefix = 'app'
 
 def globalModule = project(":${modulePrefix}-global")
 def coreModule = project(":${modulePrefix}-core")
@@ -47,8 +46,8 @@ dependencies {
     appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
     appComponent("com.haulmont.reports:reports-global:$cubaVersion")
     appComponent("com.haulmont.charts:charts-global:$cubaVersion")
-    appComponent("com.haulmont.addon.dashboard:dashboard-global:3.1.1")
-    appComponent("com.haulmont.addon.dashboardchart:dashboardchart-global:1.2.0")
+    appComponent("com.haulmont.addon.dashboard:dashboard-global:3.2.0.BETA1")
+    appComponent("com.haulmont.addon.dashboardchart:dashboardchart-global:1.3.0.BETA1")
 
 }
 
@@ -84,7 +83,7 @@ configure(globalModule) {
         main { enabled = true }
     }
 
-    
+
 }
 
 configure(coreModule) {
@@ -121,7 +120,7 @@ configure(coreModule) {
 
     task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
         dbms = 'hsql'
-        host = 'localhost'
+        host = 'localhost:9010'
         dbName = 'dashboards'
         dbUser = 'sa'
         dbPassword = ''
@@ -129,13 +128,13 @@ configure(coreModule) {
 
     task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
         dbms = 'hsql'
-        host = 'localhost'
+        host = 'localhost:9010'
         dbName = 'dashboards'
         dbUser = 'sa'
         dbPassword = ''
     }
 }
-    
+
 configure(webModule) {
     configurations {
         webcontent
@@ -146,7 +145,7 @@ configure(webModule) {
         compile(globalModule)
 
     }
-    
+
     task webArchive(type: Zip) {
         from file("$buildDir/web")
         from file('web')

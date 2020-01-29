@@ -57,11 +57,6 @@
                       height="100%">
                 <initialLayout margin="true"
                                spacing="true">
-                    <label id="welcomeLabel"
-                           align="MIDDLE_CENTER"
-                           width="100%"
-                           stylename="c-welcome-text"
-                           value="mainMsg://application.welcomeText"/>
                     <dashboard:dashboard id="dashboard" code="taxi-dashboard"/>
                 </initialLayout>
             </workArea>

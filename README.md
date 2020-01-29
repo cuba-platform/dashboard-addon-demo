@@ -15,9 +15,7 @@ This sample uses CSS based responsive layout for dashboard:
 
 Open the project in CUBA Studio and click "Run" button next to "CUBA Application"
 run/debug configuration on the main toolbar.
-The application will start at [http://localhost:8080/dashboards](http://localhost:8080/dashboards).
-
-Use `demo` as both login and password to access the application.
+The application will start at [http://localhost:8080/app](http://localhost:8080/app).
 
 ### Google API Key configuration
 
